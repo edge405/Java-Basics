@@ -1,6 +1,4 @@
-package Optional;
-
-import javax.xml.catalog.Catalog;
+package Optional.Cat;
 
 public class OptionalDemo {
     public static void main(String[] args) {

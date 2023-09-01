@@ -34,14 +34,18 @@ public class main {
             /*
              * get the all people information list and print
              */
+            int i = 0;
             for(People eachPeopleInfo : peopleList){
-                System.out.println(eachPeopleInfo);
+                i++;
+                System.out.format("People %d:\n", i);
+                System.out.println("Name:" + eachPeopleInfo.getName() + "\nAge: " + eachPeopleInfo.getAge() + "\nSex: " + eachPeopleInfo.getSex());
+                System.out.println();
             }
             System.out.println();
 
         /* if you want to get the people that less than 20 of their age, you can use stream()
         this is a lambda expression, learn lambda first before learning stream()
-        lambda expression is less the code and easy to understand.
+        lambda expression is a short block of code. It will make you code easy to understand.
          */
             List<People> filteredPeopleList = peopleList.stream().filter(peps -> peps.getAge() < 20).collect(Collectors.toList());
             filteredPeopleList.forEach(peps -> System.out.println("people that less than 20 age: " + peps));
